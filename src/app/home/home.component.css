@@ -1,0 +1,41 @@
+.logo{
+    margin: 10px;
+}
+.navbar-brand{
+    margin: 10px;
+    color: red !important;
+    font-weight:500;
+    letter-spacing: 1px;
+}
+
+.fav-button{
+    margin: 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    color:red;
+    font-weight: 1000;
+    letter-spacing: 2px;
+    border:2px solid black;
+
+}
+.navbar{
+    border-bottom: 2px solid black;
+}
+.butt{
+align-items: center;
+justify-content:center;
+/* width:20rem; */
+/* box-sizing: border-box; */
+/* background-color: red; */
+}
+.tt1{
+    
+    font-weight: 500;
+    font-size: large;
+    text-align: center;
+
+}
+.tt2{
+    font-weight: 300;
+    color:gray
+}

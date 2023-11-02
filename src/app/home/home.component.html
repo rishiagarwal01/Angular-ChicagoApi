@@ -1,0 +1,107 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <img class="logo" src="../assets/logo.png" width="50px" height="70px">
+    <a class="navbar-brand" href="#" style="color:red">Art Institute of Chicago Artwork Explorer</a>
+    <!-- <h1>Art Institute of Chicago Artwork Explorer</h1> -->
+
+    <!-- <div class="input-group search-btn">
+        <div class="form-outline">
+            <input id="search-focus" type="search" id="form1" class="form-control" />
+            <label class="form-label" for="form1">Search</label>
+        </div>
+        <button type="button" class="btn btn-primary ">
+            <i class="fas fa-search"></i>
+        </button>
+    </div> -->
+
+    <div class="input-group butt">
+        <div class="form-outline  ">
+            <input type="search" placeholder="Search for anything..." id="form1" class="form-control" />
+            <!-- <label class="form-label" for="form1">Search</label> -->
+        </div>
+        <button type="button" class="btn btn-primary">
+            <i class="fas fa-search"></i>
+        </button>
+    </div>
+
+    <div class="button-div float-ri" >
+        <button class="fav-button">
+            <!-- <i class="fa fa-star m-0"></i> -->
+            <!-- <span class="fav" (clghtick)="goToWishList()">Favourites</span> -->
+            <span class="fav" routerLink="wishlist">Favourites</span>
+        </button>
+    </div>
+
+</nav>
+
+
+
+<!-- <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Title</th>
+        <th scope="col">Image</th>
+        <th scope="col">Artist Name</th>
+        <th scope="col">Description</th>
+        <th scope="col">Year</th>
+        <th scope="col">Department</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of userData">
+        <th scope="row">{{user.title}}</th>
+       <td>
+       <img [src]="'https://www.artic.edu/iiif/2/' + user.image_id + '/full/843,/0/default.jpg'" width="200" height="100" alt="">
+       </td>
+        <td>{{user.artist_title}}</td>
+        <td>{{user.thumbnail.alt_text}}</td>
+        <td>{{user.date_display}}</td>
+        <td>{{user.department_title}}</td>
+      </tr>
+    </tbody>
+  </table> -->
+<div class="container all-cards">
+    <div class="row ">
+        <div class="col-lg-4" *ngFor="let user of userData | slice
+        : paginator.pageIndex * paginator.pageSize
+        : (paginator.pageIndex + 1) * paginator.pageSize
+  ">
+            <div class="container d-flex flex-wrap align-items-center border border-dark m-3 " style="width: 18rem;">
+                <img class="card-img-top m-1"
+                    [src]="'https://www.artic.edu/iiif/2/' + user.image_id + '/full/843,/0/default.jpg'" width="150"
+                    height="250'" alt="Card image cap">
+                <div class="card-body m-1">
+                    <h5 class="card-title tt1">{{user.title | slice:0:26}}</h5>
+                    <p class="card-text tt2">{{user.artist_title}}</p>
+                    <p class="card-text tt2">{{user.thumbnail.alt_text | slice:0:50}}</p>
+                    <p class="card-text tt2">{{user.date_display | slice:0:20}}</p>
+                    <!-- <p class="card-text tt2">{{user.department_title}}</p> -->
+                    <button class="btn btn-success m-1 p-1" (click)="viewMore(user.id)"> ViewMore </button>
+
+                    <!-- <i class="fa-regular fa-heart">Add to  Favourite</i> -->
+                    
+                    <a href="#" class="btn btn-danger m-1 p-1" (click)="addToWish(user)">Add to Favourite<i class="far fa-heart float-right m-1"></i></a>
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <pagination-controls previousLabel="Prev" nextLabel="Next" (pageChange)="p = $event"></pagination-controls> -->
+
+<!-- <pagination-controls previousLabel="Prev" nextLabel="Next" (pageChange)="onTabChange($event)"></pagination-controls> -->
+<!-- <mat-paginator #paginator [length]="userData.length" [pageSize]="10" [pageSizeOptions]="[6,12,24,48]"></mat-paginator> -->
+
+<!-- <ngb-pagination
+    [(page)]="page"
+    [pageSize]="pageSize"
+    [collectionSize]="userData.length"></ngb-pagination> -->
+
+
+    <mat-paginator
+    #paginator
+    [length]="userData.length"
+    [pageSize]="12"
+    [pageSizeOptions]="[12, 24, 48, 96]"
+  ></mat-paginator>

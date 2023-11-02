@@ -1,0 +1,55 @@
+.card {
+    position: relative;
+    border-radius: 8px;
+    border: 1px solid #cccccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    box-sizing: border-box;
+    width: 200px;
+    height: 200px;
+    transition: all linear 200ms;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    transition: all linear 200ms;
+    z-index: 1;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, .3);
+    cursor: pointer;
+}
+
+.button-div {
+    padding: 60px;
+    position: relative;
+}
+
+.fav-button {
+    border: none;
+    height: 40px;
+    width: 100px;
+    font-size: 15px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.fav{
+    margin: 100;
+    color: red;
+}
+.fav-button i {
+    position: absolute;
+    left: 70px;
+
+}
+
+.fav-button:active i {
+
+    animation: item 1s ease-in forwards;
+}

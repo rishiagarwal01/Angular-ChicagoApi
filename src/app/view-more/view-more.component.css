@@ -1,0 +1,82 @@
+.main-body {
+    color: red;
+    display: flex;
+    background-color:lightblue;
+    height: 80vh;
+}
+
+.show-more {
+    margin: 40px;
+    height: 10%;
+    width: 45%;
+    padding: 30px;
+    size: 20rem;
+}
+
+/* .picture{
+    margin-top: 20px;
+    height: 80%;
+    width: 200px;
+} */
+
+.main-body {
+    .card-img {
+        margin: 40px;
+        transition: all 0.3s ease-in-out;
+        /* height: 30%; */
+        height: 70vh;
+        width: 85%;
+    }
+}
+
+.cust{
+    color:black;
+    text-decoration: none;
+    font-size: 30px;
+    padding: 20px;
+    margin: 20px;
+}
+.cust:hover{
+    color:red;
+}
+.main-body {
+    .card-img:hover {
+      transform: scale(1.1); /* Increases the size of the image by 10% */
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Adds a subtle shadow effect */
+      filter: grayscale(10%); /* Applies a grayscale effect to the image */
+      opacity: 0.9; /* Reduces the opacity of the image slightly */
+      cursor: pointer;
+    }
+  }
+.header{
+    text-align: center;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight: 200;
+    letter-spacing: 2px;
+    font-size: xx-large;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    transition: all 0.3s ease-in-out;
+    
+}
+.t1{
+    text-align: center;
+    font-size:xx-large;
+    letter-spacing: 2px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:orange !important;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    font-weight: 900;
+}
+.t2{
+    color:red;
+    font-size: x-large;
+    font-weight: 500;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.he2{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: larger;
+    font-weight: 400;
+    color: brown;
+}

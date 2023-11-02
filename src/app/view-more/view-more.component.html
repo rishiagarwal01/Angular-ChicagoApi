@@ -1,0 +1,24 @@
+<!-- <p>view-more works!</p>
+<div class="container">
+    
+</div> -->
+<a href="home"><i class="fa fa-arrow-left cust" aria-hidden="true"></i>
+</a>
+<!-- <a href="home.component.html" target="_blank">Go back</a> -->
+<h1 class="header">Gallery Page</h1>
+<div class="container main-body">
+    <div class="picture">
+        <img class="card-img"
+            [src]="'https://www.artic.edu/iiif/2/' + artwork.image_id + '/full/843,/0/default.jpg'" 
+             alt="Card image cap">
+    </div>
+    <div class="show-more">
+        <h1 class="card-title t1"><strong>{{artwork.title }}</strong></h1>
+        <p class="card-text he2"><span class="t2">Made With Love By: </span>{{artwork.artist_title}}</p>
+        <p class="card-text he2"><span class="t2">Art Description: </span>{{artwork.thumbnail.alt_text}}</p>
+        <p class="card-text he2"><span class="t2">Made in:  </span>{{artwork.date_display }}</p>
+        <p class="card-text he2"><span class="t2">Type Of ArtWork: </span>{{artwork.artwork_type_title}}</p>
+        <p class="card-text he2"><span class="t2">Artwork Medium: </span> {{artwork.medium_display}}</p>
+    </div>
+    
+</div>
